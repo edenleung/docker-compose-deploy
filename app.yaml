@@ -1,0 +1,22 @@
+version: "2"
+
+services:
+  
+  ant-design-vue:
+    container_name: ant-design-vue
+    image: xiaodi93/ant-design:latest
+    networks:
+      - server_server
+    restart: always
+
+  ant-design-admin:
+    container_name: ant-design-admin
+    image: xiaodi93/ant-design-admin:latest
+    networks:
+      - server_server
+    restart: always
+    
+networks:
+  server_server:
+    external:
+      name: server_server
