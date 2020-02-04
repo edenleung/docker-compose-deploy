@@ -19,6 +19,8 @@ services:
     volumes:
       - /path:/etc/mysql/my.cnf
       - /path:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_PASSWORD}"
     restart: always
     networks:
       - server
